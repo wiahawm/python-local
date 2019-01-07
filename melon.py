@@ -8,6 +8,7 @@ headers = {
 }
 response = requests.get(url, headers=headers).text
 soup = BeautifulSoup(response,'html.parser')
+
 music_table = soup.select("table tr.lst50")
 
 for music in music_table:
